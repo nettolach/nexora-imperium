@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexora Imperium | Produtos digitais e serviços de programação</title>
+  <meta name="description" content="Bots para Discord, sites, plugins, servidores de Minecraft, produtos digitais e serviços de programação.">
+  <meta name="theme-color" content="#0a0a17">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-in">
+    <a href="#inicio" class="brand">
+      <span class="brand-logo" id="brand-logo"></span>
+      <span id="brand-nome"></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#categorias">Categorias</a>
+      <a href="#desenvolvimento">Desenvolvimento</a>
+      <a href="#digitais">Digitais</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#pedido-dev">Pedidos</a>
+      <a href="#plugins">Plugins</a>
+      <a href="#personalizado">Personalizado</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="container hero-in">
+      <span class="tag">Desenvolvimento • Produtos digitais</span>
+      <h1>Soluções digitais e <span class="grad">serviços de programação</span></h1>
+      <p id="hero-slogan"></p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="#digitais">Explorar produtos</a>
+        <a class="btn btn-ghost" href="#servicos">Explorar serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="categorias">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Categorias disponíveis</h2>
+        <p>Escolha uma categoria para ver os produtos e serviços.</p>
+      </div>
+      <div class="grid grid-cat" id="grid-categorias"></div>
+    </div>
+  </section>
+
+  <section class="secao alt" id="desenvolvimento">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Desenvolvimento e programação</h2>
+        <p>Projetos feitos sob medida para você.</p>
+      </div>
+      <div class="grid" id="grid-desenvolvimento"></div>
+    </div>
+  </section>
+
+  <section class="secao" id="digitais">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Produtos digitais</h2>
+        <p>Encontre templates, planilhas, modelos, conteúdos e recursos gráficos.</p>
+      </div>
+      <input type="search" class="busca" data-filtro="digitais" placeholder="Buscar produto digital..." aria-label="Buscar produto digital">
+      <div class="grid" id="grid-digitais"></div>
+      <p class="vazio" id="vazio-digitais" hidden>Nenhum produto encontrado para essa busca.</p>
+    </div>
+  </section>
+
+  <section class="secao alt" id="servicos">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Serviços extras</h2>
+        <p>Instalação, manutenção, personalização, migração e muito mais.</p>
+      </div>
+      <input type="search" class="busca" data-filtro="servicos" placeholder="Buscar serviço..." aria-label="Buscar serviço">
+      <div class="grid" id="grid-servicos"></div>
+      <p class="vazio" id="vazio-servicos" hidden>Nenhum serviço encontrado para essa busca.</p>
+    </div>
+  </section>
+
+  <section class="secao" id="pedido-dev">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Pedido de desenvolvimento</h2>
+        <p>Escolha o tipo de projeto e preencha os detalhes.</p>
+      </div>
+      <form class="form-box reveal" id="form-dev" novalidate>
+        <div class="campo">
+          <label for="dev-tipo">Tipo de projeto <span class="req">*</span></label>
+          <select id="dev-tipo" required></select>
+        </div>
+        <div id="dev-campos"></div>
+        <button class="btn btn-primary" type="submit">Enviar Pedido</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="secao alt" id="plugins">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Pedido de plugins de Minecraft</h2>
+        <p>Selecione os plugins desejados ou descreva um plugin diferenciado.</p>
+      </div>
+      <form class="form-box reveal" id="form-plugins" novalidate>
+        <h3 class="sub">Plugins disponíveis</h3>
+        <div id="plugins-disponiveis" class="plugin-lista"></div>
+
+        <h3 class="sub">Plugins selecionados</h3>
+        <ul id="plugins-selecionados" class="sel-lista"></ul>
+
+        <div class="campo">
+          <label for="plugins-detalhes">Detalhes adicionais <span class="opc">(opcional)</span></label>
+          <textarea id="plugins-detalhes" rows="3" placeholder="Informe detalhes sobre os plugins escolhidos."></textarea>
+        </div>
+
+        <label class="check">
+          <input type="checkbox" id="plugin-custom-check">
+          <span>Quero um plugin personalizado / que não está na lista</span>
+        </label>
+        <div class="campo" id="plugin-custom-box" hidden>
+          <label for="plugin-custom-desc">Descreva exatamente o que deseja <span class="req">*</span></label>
+          <textarea id="plugin-custom-desc" rows="4"></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Enviar Pedido</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="secao" id="personalizado">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Pedido Personalizado</h2>
+        <p>Descreva qualquer projeto relacionado aos produtos e serviços do site.</p>
+      </div>
+      <form class="form-box reveal" id="form-custom" novalidate>
+        <div class="campo">
+          <label for="cp-nome">Nome do pedido <span class="req">*</span></label>
+          <input type="text" id="cp-nome" required>
+        </div>
+        <div class="campo">
+          <label for="cp-categoria">Categoria do projeto <span class="req">*</span></label>
+          <select id="cp-categoria" required>
+            <option value="">Selecione...</option>
+            <option>Bot personalizado para Discord</option>
+            <option>Site personalizado</option>
+            <option>Grupo para criação de plugins</option>
+            <option>Servidor de Minecraft</option>
+            <option>Produto digital</option>
+            <option>Serviço extra</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="cp-desc">Descreva o que deseja <span class="req">*</span></label>
+          <textarea id="cp-desc" rows="6" required></textarea>
+        </div>
+        <div class="campo">
+          <label for="cp-extra">Informações adicionais <span class="opc">(opcional)</span></label>
+          <textarea id="cp-extra" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar Pedido</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-in">
+    <div>
+      <strong id="footer-nome"></strong>
+      <p class="mut" id="footer-contato"></p>
+    </div>
+    <div class="footer-btns" id="footer-btns"></div>
+  </div>
+  <p class="copy">© <span id="ano"></span> — Todos os direitos reservados.</p>
+</footer>
+
+<!-- Escolha do atendimento -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+  <div class="modal-box">
+    <button class="modal-x" id="modal-fechar" aria-label="Fechar">✕</button>
+    <h3 id="modal-titulo">Como deseja enviar?</h3>
+    <p class="mut">Escolha com quem deseja falar. Seu pedido será encaminhado para o atendimento selecionado.</p>
+    <pre class="resumo" id="modal-resumo"></pre>
+    <div class="modal-btns" id="modal-btns"></div>
+    <p class="nota" id="modal-nota"></p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
