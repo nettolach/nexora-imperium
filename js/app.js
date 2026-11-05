@@ -50,7 +50,8 @@ function botoesAtendimentoHTML(prefixo) {
     html.push(`<button type="button" class="btn btn-discord" data-canal="discord">${esc(prefixo)}Discord</button>`);
   }
   contatosWhats().forEach((c, i) => {
-    html.push(`<button type="button" class="btn btn-whats" data-canal="whats" data-i="${i}">${esc(prefixo)}WhatsApp — ${esc(c.nome)}</button>`);
+    const rotulo = c.cargo ? `${c.nome} (${c.cargo})` : c.nome;
+    html.push(`<button type="button" class="btn btn-whats" data-canal="whats" data-i="${i}">${esc(prefixo)}WhatsApp — ${esc(rotulo)}</button>`);
   });
   return html.join("");
 }
@@ -167,7 +168,7 @@ function aplicarIdentidade() {
   // Rodapé: donos e botões de contato
   const contatos = contatosWhats();
   $("#footer-contato").textContent = contatos.length
-    ? "Atendimento direto com " + listaDeNomes(contatos.map((c) => c.nome)) + "."
+    ? "Atendimento direto com " + listaDeNomes(contatos.map((c) => c.cargo ? `${c.nome} (${c.cargo})` : c.nome)) + "."
     : "Atendimento em breve.";
   $("#footer-btns").innerHTML = botoesAtendimentoHTML("");
 }

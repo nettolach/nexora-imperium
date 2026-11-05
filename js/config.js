@@ -28,7 +28,7 @@ const CONFIG = {
   //  Para adicionar ou remover alguém, edite esta lista.
   // ----------------------------------------------------------
   whatsappContatos: [
-    { nome: "Netto", numero: "5541996523235" },
-    { nome: "Jhonatas", numero: "5511911339601" }
+    { nome: "Netto", numero: "5541996523235", cargo: "Dono" },
+    { nome: "Jhonatas", numero: "5511911339601", cargo: "Subdono" }
   ]
 };
