@@ -115,19 +115,19 @@ const PERGUNTAS_FREQUENTES = [
     id: "quem-responde",
     pergunta: "Quem vai me atender, o Netto ou o Jhonatas?",
     chaves: ["quem atende", "quem responde", "netto ou jhonatas"],
-    resposta: "Pode ser qualquer um dos dois — o Netto é o dono da Nexora Imperium e o Jhonatas é o subdono, e os dois atendem pessoalmente pelo WhatsApp."
+    resposta: "Pode ser qualquer um dos dois — o Netto é o dono da Nex Imperium e o Jhonatas é o subdono, e os dois atendem pessoalmente pelo WhatsApp."
   },
   {
     id: "donos",
     pergunta: "Quem são o Netto e o Jhonatas?",
     chaves: ["netto", "jhonatas", "donos da empresa", "quem administra"],
-    resposta: "O Netto é o dono da Nexora Imperium, e o Jhonatas é o subdono. Os dois atendem pessoalmente pelo WhatsApp pra tirar dúvidas, fazer pedidos e combinar pagamento."
+    resposta: "O Netto é o dono da Nex Imperium, e o Jhonatas é o subdono. Os dois atendem pessoalmente pelo WhatsApp pra tirar dúvidas, fazer pedidos e combinar pagamento."
   },
   {
     id: "confianca",
     pergunta: "É confiável? Quem são vocês?",
     chaves: ["confiavel", "e seguro comprar", "quem sao voces", "golpe", "e serio"],
-    resposta: "A Nexora Imperium é administrada pelo Netto (dono) e pelo Jhonatas (subdono), que atendem pessoalmente cada pedido pelo WhatsApp. Qualquer detalhe do pedido e do pagamento é combinado direto com eles — por isso vale sempre conferir e guardar o combinado por escrito."
+    resposta: "A Nex Imperium é administrada pelo Netto (dono) e pelo Jhonatas (subdono), que atendem pessoalmente cada pedido pelo WhatsApp. Qualquer detalhe do pedido e do pagamento é combinado direto com eles — por isso vale sempre conferir e guardar o combinado por escrito."
   },
   {
     id: "contato",

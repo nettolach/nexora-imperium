@@ -4,7 +4,7 @@
 // ============================================================
 const CONFIG = {
   // Nome que aparece no cabeçalho, rodapé e título da aba.
-  nomeEmpresa: "Nexora Imperium",
+  nomeEmpresa: "Nex Imperium",
 
   // Frase exibida na seção principal.
   slogan: "Bots, sites, plugins, servidores de Minecraft e produtos digitais.",
