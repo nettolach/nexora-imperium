@@ -3,220 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nex Imperium | Produtos digitais e serviços de programação</title>
-  <meta name="description" content="Bots para Discord, sites, plugins, servidores de Minecraft, produtos digitais e serviços de programação.">
+  <title>Nex Imperium | Bots, sites, plugins e serviços de programação</title>
+  <meta name="description" content="Bots para Discord, sites, plugins e servidores de Minecraft, produtos digitais e serviços de programação sob medida.">
   <meta name="theme-color" content="#0a0a17">
-  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/ajuda.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="canonical" href="https://nettolach.github.io/nexora-imperium/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nex Imperium | Programação e produtos digitais">
+  <meta property="og:description" content="Bots, sites, plugins de Minecraft e serviços de programação sob medida.">
+  <meta property="og:url" content="https://nettolach.github.io/nexora-imperium/">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css?v=2">
 </head>
 <body>
+  <div class="progress" id="progress"></div>
+  <div class="bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
 
-<header class="header">
-  <div class="container header-in">
-    <a href="#inicio" class="brand">
-      <span class="brand-logo" id="brand-logo"></span>
-      <span id="brand-nome"></span>
-    </a>
-    <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    <nav class="nav" id="nav">
-      <a href="#categorias">Categorias</a>
-      <a href="#desenvolvimento">Desenvolvimento</a>
-      <a href="#digitais">Digitais</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#pedido-dev">Pedidos</a>
-      <a href="#plugins">Plugins</a>
-      <a href="#personalizado">Personalizado</a>
-          <a href="#ajuda">Ajuda</a>
+  <header class="nav" id="nav">
+    <a class="logo" href="#inicio" aria-label="Nex Imperium, início"><span class="logo-mark">N</span> Nex <b>Imperium</b></a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="menu" aria-label="Principal">
+      <a href="#inicio">Início</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#pedido">Fazer pedido</a>
+      <a href="#ajuda">Ajuda</a>
+      <a href="#contato" class="nav-cta">Contato</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-
-  <section class="hero" id="inicio">
-    <div class="container hero-in">
-      <span class="tag">Desenvolvimento • Produtos digitais</span>
-      <h1>Soluções digitais e <span class="grad">serviços de programação</span></h1>
-      <p id="hero-slogan"></p>
-      <div class="hero-btns">
-        <a class="btn btn-primary" href="#digitais">Explorar produtos</a>
-        <a class="btn btn-ghost" href="#servicos">Explorar serviços</a>
+  <main>
+    <section id="inicio" class="hero">
+      <p class="eyebrow reveal">Desenvolvimento • Produtos digitais • Minecraft</p>
+      <h1 class="reveal">Criamos <span class="grad" id="typed">bots para Discord</span><span class="caret">|</span><br>do jeito que você imaginou.</h1>
+      <p class="lead reveal">Bots, sites, plugins, servidores de Minecraft e serviços de programação sob medida, com atendimento direto e acompanhamento do início ao fim.</p>
+      <div class="cta-row reveal">
+        <a class="btn primary" href="#pedido">Pedir orçamento grátis</a>
+        <a class="btn ghost" href="#catalogo">Ver catálogo</a>
       </div>
-    </div>
-  </section>
+      <ul class="badges reveal">
+        <li>⚡ Resposta rápida</li>
+        <li>🛠️ Feito sob medida</li>
+        <li>🤝 Suporte pós-entrega</li>
+      </ul>
+    </section>
 
-  <section class="secao" id="categorias">
-    <div class="container">
-      <div class="sec-head reveal">
-        <h2>Categorias disponíveis</h2>
-        <p>Escolha uma categoria para ver os produtos e serviços.</p>
+    <section id="como-funciona" class="section">
+      <h2 class="reveal">Como funciona</h2>
+      <p class="sub reveal">Do primeiro contato à entrega, em três passos simples.</p>
+      <div class="steps">
+        <article class="step reveal"><span class="num">1</span><h3>Você conta a ideia</h3><p>Preencha o pedido ou chame no WhatsApp. Quanto mais detalhes, melhor o orçamento.</p></article>
+        <article class="step reveal"><span class="num">2</span><h3>Alinhamos escopo e prazo</h3><p>Você recebe valor, prazo e o que está incluso antes de qualquer pagamento.</p></article>
+        <article class="step reveal"><span class="num">3</span><h3>Desenvolvemos e entregamos</h3><p>Você acompanha o andamento, testa e recebe tudo pronto, com suporte depois.</p></article>
       </div>
-      <div class="grid grid-cat" id="grid-categorias"></div>
-    </div>
-  </section>
+    </section>
 
-  <section class="secao alt" id="desenvolvimento">
-    <div class="container">
-      <div class="sec-head reveal">
-        <h2>Desenvolvimento e programação</h2>
-        <p>Projetos feitos sob medida para você.</p>
-      </div>
-      <div class="grid" id="grid-desenvolvimento"></div>
-    </div>
-  </section>
+    <section id="catalogo" class="section">
+      <h2 class="reveal">Catálogo</h2>
+      <p class="sub reveal">Escolha uma categoria e clique em "Pedir" no que te interessar.</p>
+      <div class="filters reveal" id="filters" role="tablist" aria-label="Categorias"></div>
+      <div class="grid" id="catalog"></div>
+    </section>
 
-  <section class="secao" id="digitais">
-    <div class="container">
-      <div class="sec-head reveal">
-        <h2>Produtos digitais</h2>
-        <p>Encontre templates, planilhas, modelos, conteúdos e recursos gráficos.</p>
-      </div>
-      <input type="search" class="busca" data-filtro="digitais" placeholder="Buscar produto digital..." aria-label="Buscar produto digital">
-      <div class="grid" id="grid-digitais"></div>
-      <p class="vazio" id="vazio-digitais" hidden>Nenhum produto encontrado para essa busca.</p>
-    </div>
-  </section>
-
-  <section class="secao alt" id="servicos">
-    <div class="container">
-      <div class="sec-head reveal">
-        <h2>Serviços extras</h2>
-        <p>Instalação, manutenção, personalização, migração e muito mais.</p>
-      </div>
-      <input type="search" class="busca" data-filtro="servicos" placeholder="Buscar serviço..." aria-label="Buscar serviço">
-      <div class="grid" id="grid-servicos"></div>
-      <p class="vazio" id="vazio-servicos" hidden>Nenhum serviço encontrado para essa busca.</p>
-    </div>
-  </section>
-
-  <section class="secao" id="pedido-dev">
-    <div class="container">
-      <div class="sec-head reveal">
-        <h2>Pedido de desenvolvimento</h2>
-        <p>Escolha o tipo de projeto e preencha os detalhes.</p>
-      </div>
-      <form class="form-box reveal" id="form-dev" novalidate>
-        <div class="campo">
-          <label for="dev-tipo">Tipo de projeto <span class="req">*</span></label>
-          <select id="dev-tipo" required></select>
+    <section id="pedido" class="section">
+      <h2 class="reveal">Fazer pedido</h2>
+      <p class="sub reveal">Um só formulário para tudo. Escolha como enviar: pelo WhatsApp (mensagem já montada) ou por e-mail.</p>
+      <form class="form reveal" id="orderForm" novalidate>
+        <div class="row">
+          <label>Seu nome *<input type="text" id="fNome" required autocomplete="name" placeholder="Como podemos te chamar?"></label>
+          <label>Tipo de projeto *
+            <select id="fTipo" required>
+              <option value="">Selecione...</option>
+              <option>Bot para Discord</option>
+              <option>Site</option>
+              <option>Plugin de Minecraft</option>
+              <option>Servidor de Minecraft</option>
+              <option>Produto digital</option>
+              <option>Serviço extra</option>
+              <option>Outro</option>
+            </select>
+          </label>
         </div>
-        <div id="dev-campos"></div>
-        <button class="btn btn-primary" type="submit">Enviar Pedido</button>
+        <label>Nome do pedido *<input type="text" id="fTitulo" required placeholder="Ex.: Bot de tickets e moderação"></label>
+        <div class="plugins" id="pluginBox" hidden>
+          <span class="lbl">Plugins desejados (marque quantos quiser)</span>
+          <div class="chips" id="chips"></div>
+        </div>
+        <label>Descreva o que deseja *<textarea id="fDesc" rows="5" required placeholder="Funções, referências, prazo desejado, orçamento..."></textarea></label>
+        <label>Informações adicionais (opcional)<textarea id="fExtra" rows="2" placeholder="Links, exemplos, observações"></textarea></label>
+        <div class="cta-row">
+          <button type="button" class="btn wa" id="sendWa">💬 Enviar pelo WhatsApp</button>
+          <button type="button" class="btn ghost" id="sendMail">✉️ Enviar por e-mail</button>
+        </div>
+        <p class="hint">Ao enviar, seu aplicativo abre com a mensagem pronta. Você revisa e confirma o envio.</p>
       </form>
-    </div>
-  </section>
+    </section>
 
-  <section class="secao alt" id="plugins">
-    <div class="container">
-      <div class="sec-head reveal">
-        <h2>Pedido de plugins de Minecraft</h2>
-        <p>Selecione os plugins desejados ou descreva um plugin diferenciado.</p>
+    <section id="ajuda" class="section">
+      <h2 class="reveal">Central de ajuda</h2>
+      <p class="sub reveal">Respostas rápidas para as dúvidas mais comuns.</p>
+      <div class="faq reveal">
+        <details><summary>Quanto tempo leva para entregar?</summary><p>Depende do projeto. Depois que você envia o pedido, passamos uma estimativa de prazo antes de qualquer pagamento. Projetos simples costumam ser bem mais rápidos que sistemas completos.</p></details>
+        <details><summary>Como funciona o pagamento?</summary><p>Combinamos tudo pelo atendimento antes de começar. Projetos maiores podem ser divididos em etapas, para ficar seguro para os dois lados.</p></details>
+        <details><summary>Posso pedir alterações depois?</summary><p>Sim. Ajustes pequenos fazem parte do combinado. Mudanças grandes de escopo são orçadas à parte, sempre com seu aval.</p></details>
+        <details><summary>Vocês dão suporte depois da entrega?</summary><p>Sim. Ajudamos com instalação, dúvidas de uso e correção de bugs do que foi entregue.</p></details>
+        <details><summary>Posso pedir algo que não está no catálogo?</summary><p>Pode e deve! Escolha "Outro" no formulário e descreva sua ideia. Se for viável, montamos um orçamento sob medida.</p></details>
+        <details><summary>Como acompanho meu pedido?</summary><p>Pelo canal que você escolher (WhatsApp ou e-mail). Você recebe atualizações durante o desenvolvimento.</p></details>
+        <details><summary>Meus dados estão seguros?</summary><p>Usamos suas informações apenas para atender o pedido e não compartilhamos com terceiros.</p></details>
       </div>
-      <form class="form-box reveal" id="form-plugins" novalidate>
-        <h3 class="sub">Plugins disponíveis</h3>
-        <div id="plugins-disponiveis" class="plugin-lista"></div>
+    </section>
+  </main>
 
-        <h3 class="sub">Plugins selecionados</h3>
-        <ul id="plugins-selecionados" class="sel-lista"></ul>
-
-        <div class="campo">
-          <label for="plugins-detalhes">Detalhes adicionais <span class="opc">(opcional)</span></label>
-          <textarea id="plugins-detalhes" rows="3" placeholder="Informe detalhes sobre os plugins escolhidos."></textarea>
-        </div>
-
-        <label class="check">
-          <input type="checkbox" id="plugin-custom-check">
-          <span>Quero um plugin personalizado / que não está na lista</span>
-        </label>
-        <div class="campo" id="plugin-custom-box" hidden>
-          <label for="plugin-custom-desc">Descreva exatamente o que deseja <span class="req">*</span></label>
-          <textarea id="plugin-custom-desc" rows="4"></textarea>
-        </div>
-
-        <button class="btn btn-primary" type="submit">Enviar Pedido</button>
-      </form>
-    </div>
-  </section>
-
-  <section class="secao" id="personalizado">
-    <div class="container">
-      <div class="sec-head reveal">
-        <h2>Pedido Personalizado</h2>
-        <p>Descreva qualquer projeto relacionado aos produtos e serviços do site.</p>
+  <footer id="contato" class="footer">
+    <div class="foot-top">
+      <div>
+        <a class="logo" href="#inicio"><span class="logo-mark">N</span> Nex <b>Imperium</b></a>
+        <p class="foot-text">Programação e produtos digitais sob medida. Vamos tirar sua ideia do papel?</p>
       </div>
-      <form class="form-box reveal" id="form-custom" novalidate>
-        <div class="campo">
-          <label for="cp-nome">Nome do pedido <span class="req">*</span></label>
-          <input type="text" id="cp-nome" required>
-        </div>
-        <div class="campo">
-          <label for="cp-categoria">Categoria do projeto <span class="req">*</span></label>
-          <select id="cp-categoria" required>
-            <option value="">Selecione...</option>
-            <option>Bot personalizado para Discord</option>
-            <option>Site personalizado</option>
-            <option>Grupo para criação de plugins</option>
-            <option>Servidor de Minecraft</option>
-            <option>Produto digital</option>
-            <option>Serviço extra</option>
-          </select>
-        </div>
-        <div class="campo">
-          <label for="cp-desc">Descreva o que deseja <span class="req">*</span></label>
-          <textarea id="cp-desc" rows="6" required></textarea>
-        </div>
-        <div class="campo">
-          <label for="cp-extra">Informações adicionais <span class="opc">(opcional)</span></label>
-          <textarea id="cp-extra" rows="3"></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">Enviar Pedido</button>
-      </form>
-    </div>
-  </section>
-
-
-  <section class="secao alt" id="ajuda">
-    <div class="container">
-      <div class="sec-head reveal">
-        <h2>Central de Ajuda</h2>
-        <p>Perguntas frequentes sobre pedidos, pagamento e atendimento. Se não encontrar o que precisa, use o chat no canto da tela ou fale direto com a gente.</p>
+      <div class="contacts">
+        <a class="contact" href="https://www.instagram.com/nexora_imperium/" target="_blank" rel="noopener noreferrer"><span>📸</span><div><small>Instagram</small><b>@nexora_imperium</b></div></a>
+        <a class="contact" id="waFoot" href="#" target="_blank" rel="noopener noreferrer"><span>💬</span><div><small>WhatsApp</small><b>+55 (41) 99127-1247</b></div></a>
+        <a class="contact" href="mailto:administracaonetto@gmail.com"><span>✉️</span><div><small>E-mail</small><b>administracaonetto@gmail.com</b></div></a>
       </div>
-      <div class="ajuda-faq-lista" id="ajuda-faq-lista"></div>
     </div>
-  </section>
+    <p class="copy">© <span id="year"></span> Nex Imperium. Todos os direitos reservados.</p>
+  </footer>
 
-</main>
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">💬</a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<footer class="footer">
-  <div class="container footer-in">
-    <div>
-      <strong id="footer-nome"></strong>
-      <p class="mut" id="footer-contato"></p>
-    </div>
-    <div class="footer-btns" id="footer-btns"></div>
-  </div>
-  <p class="copy">© <span id="ano"></span> — Todos os direitos reservados.</p>
-</footer>
-
-<!-- Escolha do atendimento -->
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-  <div class="modal-box">
-    <button class="modal-x" id="modal-fechar" aria-label="Fechar">✕</button>
-    <h3 id="modal-titulo">Como deseja enviar?</h3>
-    <p class="mut">Escolha com quem deseja falar. Seu pedido será encaminhado para o atendimento selecionado.</p>
-    <pre class="resumo" id="modal-resumo"></pre>
-    <div class="modal-btns" id="modal-btns"></div>
-    <p class="nota" id="modal-nota"></p>
-  </div>
-</div>
-
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<script src="js/config.js"></script>
-<script src="js/data.js"></script>
-<script src="js/ajuda-dados.js"></script>
-<script src="js/app.js"></script>
-<script src="js/ajuda.js"></script>
+  <script src="assets/app.js?v=2" defer></script>
 </body>
 </html>
